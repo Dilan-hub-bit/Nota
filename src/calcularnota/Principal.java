@@ -4,6 +4,8 @@
  */
 package calcularnota;
 
+import Formulario.FormNotas;
+
 /**
  *
  * @author Sala de Sistemas
@@ -14,7 +16,8 @@ public class Principal {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        FormNotas f = new FormNotas();
+        f.setVisible(true);
     }
     
 }

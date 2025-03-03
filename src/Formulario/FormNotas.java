@@ -4,6 +4,7 @@
  */
 package Formulario;
 import Clases.Notas;
+import javax.swing.JOptionPane;
 /**
  *
  * @author Sala de Sistemas
@@ -84,10 +85,10 @@ public class FormNotas extends javax.swing.JFrame {
                                     .addComponent(jLabel3)
                                     .addComponent(lblResultado))
                                 .addGap(37, 37, 37)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtNota3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtNota2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtNota1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtNota2, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
+                                    .addComponent(txtNota1)
+                                    .addComponent(txtNota3))))))
                 .addContainerGap(230, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -129,10 +130,12 @@ public class FormNotas extends javax.swing.JFrame {
 
     private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
         
-        Double.parseDouble(txtNota1.getText());
-        Double.parseDouble(txtNota2.getText());
-        Double.parseDouble(txtNota3.getText());
-        Notas = new Notas(Nota1,Nota2,Nota3);
+        double nota1 = Double.parseDouble(txtNota1.getText());
+        double nota2 = Double.parseDouble(txtNota2.getText());
+        double nota3 = Double.parseDouble(txtNota3.getText());
+        Notas n = new Notas();
+        //n.calcularNota(nota1,nota2,nota3);
+        JOptionPane.showMessageDialog(rootPane, "la nota final es:" + n.calcularNota(nota1,nota2,nota3) );
     }//GEN-LAST:event_btnCalcularActionPerformed
 
     /**

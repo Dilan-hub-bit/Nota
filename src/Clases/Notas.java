@@ -54,7 +54,10 @@ public class Notas {
     public void setNota3(Double Nota3) {
         this.Nota3 = Nota3;
     }
-    public double calcularNota(){
-        return(Nota1*0.30)+(Nota2*0.30)+(Nota3*0.40);
+    public double calcularNota(double pn1, double pn2, double pn3){
+        double cn1=this.Nota1 = pn1;
+         double cn2=this.Nota2 = pn2;
+          double cn3=this.Nota3 = pn3;
+        return(cn1*0.30)+(cn2*0.30)+(cn3*0.40);
     }
 }
